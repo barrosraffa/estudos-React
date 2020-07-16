@@ -3,9 +3,7 @@ import './App.scss';
 import city from '../../assets/mar.jpg';
 import ListItems from './ListItems';
 
-//adicionando tarefas
 //limpando o input de tarefas
-// deletando uma tarefa   
 // concluindo uma tarefa
 // concluindo todas as tarefas
 // desmarcando todas as tarefas
@@ -28,7 +26,8 @@ class App extends React.Component {
         if(this.inputElement.value !== ""){
             let newItem = {
                 text: this.inputElement.value,
-                key: Date.now()
+                key: Date.now(),
+                active: true
             };
         
             this.setState((prevState) => {
